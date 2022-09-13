@@ -1,0 +1,124 @@
+/*////////////////////////
+    Table of Contents
+    1. Global Styles
+    2. Typography
+    3. Layout
+        3.1 Reusables
+        3.2 Other
+    4. Areas
+        4.1 Header
+        4.2 Introduction
+        etc.
+    5. Media Queries
+////////////////////////*/
+
+/* ------------------------------- 1. Global Styles -------------------------------- */
+
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700;900&family=Roboto:wght@300;400;500;700&display=swap');
+
+
+:root {
+    /*colors*/
+    --purple: HSL(259, 72%, 47%);
+    --blue: HSL(241, 75%, 58%);
+    --pink:HSL(337, 83%, 60%);
+    --black:HSL(0, 0%, 5%);
+    --light-purple:HSL(248, 100%, 97%);
+    --light-grey:HSL(210, 33%, 96%);
+    --grey:HSL(0, 0%, 48%);
+    /*fonts*/
+    --header-fonts:'Merriweather', serif;
+    --body-fonts:'Roboto', sans-serif;
+}
+
+
+
+* {
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header, section, footer{
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+/* ------------------------------- 2. Typography ----------------------------------- */
+
+h1,h2,h3,h4,h5,h6 {
+    font-family: var(--header-fonts);
+}
+
+p {
+    font-family: var(--body-fonts);
+}
+
+
+/* ------------------------------- 3. Layout --------------------------------------- */
+
+/* --------------- 3.1 Reusables ----------------------- */
+
+
+
+/* --------------- 3.2 Other --------------------------- */
+
+header {
+    color: white;
+    background: linear-gradient(90deg, var(--blue) 0%, var(--purple) 100%);
+    padding-top: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+h1,h2{
+    text-align: center;
+}
+
+ul{
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    width: 80vw;
+    margin-bottom: 160px;
+}
+
+a, button{
+    text-decoration: none;
+    color:white;
+    font-family: var(--header-fonts);
+    white-space: nowrap;
+    font-weight: 900;
+    font-size: 20px;
+}
+
+h1 {
+    font-size: 72px;
+    margin-bottom: 40px;
+}
+
+h2{
+    font-size: 43px;
+    font-weight: 200;
+    margin-bottom: 40px;
+}
+
+button {
+    margin-bottom: 160px;
+}
+
+
+
+
+
+
+
+/* ------------------------------- 4. Areas ---------------------------------------- */
+
+/* --------------- 4.1 Header ------------------------- */
+
+/* --------------- 4.2 Introduction ------------------- */
+
+/* ------------------------------- 5. Media Queries -------------------------------- */

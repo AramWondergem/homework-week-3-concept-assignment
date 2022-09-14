@@ -39,15 +39,15 @@
     box-sizing: border-box;
 }
 
-header, section, footer{
-    padding-left: 20px;
-    padding-right: 20px;
-}
+
+
+
 
 /* ------------------------------- 2. Typography ----------------------------------- */
 
 h1,h2,h3,h4,h5,h6 {
     font-family: var(--header-fonts);
+    text-align: center;
 }
 
 p {
@@ -59,65 +59,136 @@ p {
 
 /* --------------- 3.1 Reusables ----------------------- */
 
+.outer-box{
+    display: flex;
+    justify-content: center;
+}
+.inner-box {
+    flex:0 1 1400px;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+p{
+    text-align: center;
+}
+
+button{
+    text-decoration: none;
+    color:white;
+    font-family: var(--body-fonts);
+    white-space: nowrap;
+    font-weight: 400;
+    font-size: 20px;
+
+    background: var(--pink);
+    padding-left: 40px;
+    padding-right:40px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border: none;
+    border-radius: 50vh;
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.3);
+    text-transform: uppercase;
+}
 
 
 /* --------------- 3.2 Other --------------------------- */
 
+/* ------------------------------- 4. Areas ---------------------------------------- */
+
+
+/* --------------- 4.1 Header ------------------------- */
+
 header {
     color: white;
     background: linear-gradient(90deg, var(--blue) 0%, var(--purple) 100%);
-    padding-top: 30px;
+    padding-top: 40px;
+    padding-bottom:190px;
+    position: relative;
+}
+
+header::after {
+    content: "";
+    display: block;
+    width: 0;
+    height:0;
+    border-top: 50px solid transparent;
+    border-left: 100vw solid white;
+    position:absolute;
+    bottom:0;
+    left:0;
+
+}
+.inner-box-header{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
 }
-
-h1,h2{
-    text-align: center;
+nav
+ {
+    align-self: flex-end;
+    display: flex;
+    justify-content: flex-end;
+    width:100%; /*to increase the size of the nav to the innerbox*/
 }
 
-ul{
+.nav-items{
+    flex: 0 1 400px;
     list-style: none;
     display: flex;
     justify-content: space-between;
-    width: 80vw;
-    margin-bottom: 160px;
+    gap: 50px;
 }
 
-a, button{
+nav a{
+    flex: 0 1;
+    white-space: nowrap;
+
     text-decoration: none;
     color:white;
-    font-family: var(--header-fonts);
-    white-space: nowrap;
-    font-weight: 900;
+    font-family: var(--body-fonts);
+    font-weight: 300;
     font-size: 20px;
 }
 
+.div-h1\+p\+button {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 30px;
+    margin-top:132px;
+}
+
 h1 {
-    font-size: 72px;
-    margin-bottom: 40px;
+    font-size: 60px;
 }
 
-h2{
-    font-size: 43px;
+header p{
+    font-size: 32px;
     font-weight: 200;
-    margin-bottom: 40px;
 }
 
-button {
-    margin-bottom: 160px;
+.header-div-button {
+    display: flex;
+    justify-content: center;
+
 }
 
+.header-button{
 
+}
 
+header img {
+    position:absolute;
+    bottom: 0;
+}
 
+header img {
+    left: calc(50% - 40px)
+}
 
-
-
-/* ------------------------------- 4. Areas ---------------------------------------- */
-
-/* --------------- 4.1 Header ------------------------- */
 
 /* --------------- 4.2 Introduction ------------------- */
 

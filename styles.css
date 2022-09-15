@@ -26,6 +26,7 @@
     --light-purple:HSL(248, 100%, 97%);
     --light-grey:HSL(210, 33%, 96%);
     --grey:HSL(0, 0%, 48%);
+    --white: white;
     /*fonts*/
     --header-fonts:'Merriweather', serif;
     --body-fonts:'Roboto', sans-serif;
@@ -73,7 +74,7 @@ p {
 }
 
 p{
-    text-align: center;
+
 }
 
 button{
@@ -196,6 +197,7 @@ a{
 .header__undertitle{
     font-size: 32px;
     font-weight: 200;
+    text-align: center;
 }
 
 .header__divbutton {
@@ -270,6 +272,8 @@ a{
     align-items: center;
     gap: 50px;
     position:relative;
+    padding-top: 100px;
+    padding-bottom: 100px;
 }
 
 .casestudies_container::before {
@@ -301,7 +305,8 @@ a{
 
     display: flex;
     justify-content: space-between;
-    flex-wrap: wrap;
+    gap: 40px;
+    /*flex-wrap: wrap;*/
 
 
 }
@@ -312,16 +317,17 @@ a{
     flex-direction: column;
     justify-content: space-between;
     align-items: start;
-
-
+    text-align: start;
 }
 
 .casestudie__imagewrapper {
-    flex: 0 1 660px;
+    border:solid;
+    border-color:black;
+    flex: 0 1 800px;
 }
 
-.casestudie__imagewrapper>img {
-    widt:100%;
+.casestudie__imagewrapper img {
+    width:100%;
 }
 
 

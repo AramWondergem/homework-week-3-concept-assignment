@@ -29,6 +29,8 @@
     /*fonts*/
     --header-fonts:'Merriweather', serif;
     --body-fonts:'Roboto', sans-serif;
+    /* slope background color angles*/
+    --background-slope: 50px;
 }
 
 
@@ -108,7 +110,7 @@ a{
 
 /* --------------- 4.1 Header ------------------------- */
 
-header {
+.container_header {
     color: white;
     background: linear-gradient(90deg, var(--blue) 0%, var(--purple) 100%);
     padding-top: 40px;
@@ -117,7 +119,7 @@ header {
     z-index: 1;
 }
 
-header::before {
+.container_header::before {
     content:"";
     background: url(assets/noise-texture.png);
     width: 100%;
@@ -128,12 +130,12 @@ header::before {
     z-index:-1;
 }
 
-header::after {
+.container_header::after {
     content: "";
     display: block;
     width: 0;
     height:0;
-    border-top: 50px solid transparent;
+    border-top: var(--background-slope) solid transparent;
     border-left: 100vw solid white;
     position:absolute;
     bottom:0;
@@ -210,19 +212,13 @@ header::after {
 
 
 /* --------------- 4.2 Introduction ------------------- */
-
-.introduction {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
+.container_introduction {
+    position:relative;
     padding-top: 100px;
     padding-bottom: 100px;
-    gap:40px;
-    position:relative;
 }
 
-.introduction::before {
+.container_introduction::before {
 
     content: "hello";
     font-size: 400px;
@@ -231,8 +227,29 @@ header::after {
     color: var(--light-grey);
     position: absolute;
     left:calc(50% - 440px);
-    top:calc(50% - 310px);
+    top: -30px;
     z-index: -1;
+}
+
+.container_introduction::after {
+    content: "";
+    display: block;
+    width: 0;
+    height:0;
+    border-top: var(--background-slope) solid transparent;
+    border-left: 100vw solid var(--light-grey);
+    position:absolute;
+    bottom:0;
+    left:0;
+}
+
+.introduction {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap:40px;
+
 }
 
 .introduction h2 {
@@ -243,5 +260,112 @@ header::after {
 .introduction p {
     padding-top: 50px;
 }
+/* --------------- 4.3 Work ------------------- */
+
+.casestudies_container {
+    background-color:var(--light-grey);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+    position:relative;
+}
+
+.casestudies_container::before {
+    content: "work";
+    font-size: 400px;
+    font-family: var(--body-fonts);
+    font-weight: 700;
+    color: white;
+    position: absolute;
+    left:calc(50% - 440px);
+    top: -30px;
+}
+
+.casestudies_container::after {
+    content: "";
+    display: block;
+    width: 0;
+    height:0;
+    border-top: var(--background-slope) solid transparent;
+    border-left: 100vw solid white;
+    position:absolute;
+    bottom:0;
+    left:0;
+}
+
+.casestudie {
+    z-index: 1;
+    flex:0 1;
+
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+
+}
+
+.casestudie__textwrapper {
+    flex: 0 0 660px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+
+
+}
+
+.casestudie__imagewrapper {
+    flex: 0 1 660px;
+}
+
+.casestudie__imagewrapper>img {
+    widt:100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* ------------------------------- 5. Media Queries -------------------------------- */

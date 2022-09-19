@@ -32,6 +32,8 @@
     --body-fonts:'Roboto', sans-serif;
     /* slope background color angles*/
     --background-slope: 50px;
+    /*maximum width innerboxes*/
+    --max-width-innerbox: 1400px;
 }
 
 
@@ -68,7 +70,7 @@ p {
     justify-content: center;
 }
 .inner-box {
-    flex:0 1 1400px;
+    flex:0 1 var(--max-width-innerbox);
     margin-left: 50px;
     margin-right: 50px;
 }
@@ -264,19 +266,15 @@ a{
 }
 /* --------------- 4.3 Work ------------------- */
 
-.casestudies_container {
+.casestudies_outer-box {
     background-color:var(--light-grey);
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    gap: 50px;
     position:relative;
-    padding-top: 100px;
-    padding-bottom: 100px;
+    padding-top: 225px;
+    padding-bottom: 225px;
 }
 
-.casestudies_container::before {
+.casestudies_outer-box::before {
     content: "work";
     font-size: 400px;
     font-family: var(--body-fonts);
@@ -287,7 +285,7 @@ a{
     top: -30px;
 }
 
-.casestudies_container::after {
+.casestudies_outer-box::after {
     content: "";
     display: block;
     width: 0;
@@ -299,35 +297,70 @@ a{
     left:0;
 }
 
+.casestudie_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 50px;
+    align-items: center;
+}
+
 .casestudie {
     z-index: 1;
-    flex:0 1;
-
+    width: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
+    align-items: center;
     gap: 40px;
-    /*flex-wrap: wrap;*/
+}
 
-
+.casestudie_container :nth-child(even) {
+    flex-direction: row-reverse;
 }
 
 .casestudie__textwrapper {
-    flex: 0 0 660px;
+    flex: 0 0 300px;
+    min-height: 300px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
+    gap: 45px;
     align-items: start;
     text-align: start;
 }
 
+.casestudie__headingwrapper h2{
+    margin-bottom: 20px;
+
+}
+
+.casestudie__textwrapper a{
+    position: relative;
+}
+
+.casestudie__textwrapper a::after {
+    content: "";
+    background-color: var(--blue);
+    width: 15px;
+    height: 2px;
+    top: 9px;
+    left: 95px;
+    position: absolute;
+    transition: width .35s ease-in-out;
+}
+
+.casestudie__textwrapper a:hover::after {
+    width: 70px;
+}
+
 .casestudie__imagewrapper {
-    border:solid;
-    border-color:black;
-    flex: 0 1 800px;
+    flex: 1 0 450px;
+    max-width: 600px;
 }
 
 .casestudie__imagewrapper img {
     width:100%;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
 }
 
 

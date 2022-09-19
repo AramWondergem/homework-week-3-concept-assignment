@@ -364,7 +364,7 @@ a {
     box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
 }
 
-/* --------------- 4.3 Work ------------------- */
+/* --------------- 4.4 Services ------------------- */
 
 .services_container {
     position: relative;
@@ -393,9 +393,9 @@ a {
     border-bottom: var(--background-slope) solid transparent;
     border-right: 100vw solid white;
     position: absolute;
-    bottom: calc(-1* var(--background-slope));
+    bottom: calc(-1 * var(--background-slope));
     left: 0;
-    /*z-index: 3;*/
+    z-index: 2;
 }
 
 .services {
@@ -407,7 +407,6 @@ a {
     row-gap: 30px;
 
 
-
 }
 
 .services__article {
@@ -417,7 +416,7 @@ a {
     border-style: solid;
     padding: 30px;
 
-    display:flex;
+    display: flex;
     flex-direction: column;
 
     box-shadow: 0 10px 10px rgba(0, 0, 0, 0.15);
@@ -434,18 +433,104 @@ a {
     width: 100%;
 }
 
-.services__article p{
+.services__article p {
     font-weight: 300;
 }
 
-.services__article h3{
+.services__article h3 {
     text-align: start;
     color: var(--blue);
     margin-top: 10px;
-    margin-bottom:20px;
+    margin-bottom: 20px;
     font-size: 25px;
-    font-weight:700;
+    font-weight: 700;
 }
 
+/* --------------- 4.4 Contact us ------------------- */
+.container_contact-us {
+    color: white;
+    background: linear-gradient(90deg, var(--blue) 0%, var(--purple) 100%);
+    padding-top: 150px;
+    padding-bottom: 40px;
+    position: relative;
+    z-index: 1;
+}
+
+.container_contact-us::before {
+    content: "";
+    background: url(assets/noise-texture.png);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.contact-us {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.contact-us h2 {
+    font-size: 50px;
+}
+
+.contact-us p {
+    font-weight: 300;
+}
+
+.contact-us__form {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.contact-us__formdiv {
+    flex:0 1 800px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+}
+
+.contact-us__input-labelwrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+.contact-us__inputwrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+}
+
+.contact-us__form input, .contact-us__form textarea {
+    flex: 0 1 800px;
+    padding: 15px;
+    border-radius: 5px;
+    border: 1px solid var(--grey);
+    display: block;
+    font-family: var(--body-fonts);
+}
+
+.contact-us__input-labelwrapper label {
+    font-family: var(--body-fonts);
+    font-weight: 700;
+    font-size: 12px;
+}
+
+.contact-us__form button {
+    padding-right: 80px;
+    padding-left: 80px;
+}
 
 /* ------------------------------- 5. Media Queries -------------------------------- */

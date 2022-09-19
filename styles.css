@@ -21,15 +21,15 @@
     /*colors*/
     --purple: HSL(259, 72%, 47%);
     --blue: HSL(241, 75%, 58%);
-    --pink:HSL(337, 83%, 60%);
-    --black:HSL(0, 0%, 5%);
-    --light-purple:HSL(248, 100%, 97%);
-    --light-grey:HSL(210, 33%, 96%);
-    --grey:HSL(0, 0%, 48%);
+    --pink: HSL(337, 83%, 60%);
+    --black: HSL(0, 0%, 5%);
+    --light-purple: HSL(248, 100%, 97%);
+    --light-grey: HSL(210, 33%, 96%);
+    --grey: HSL(0, 0%, 48%);
     --white: white;
     /*fonts*/
-    --header-fonts:'Merriweather', serif;
-    --body-fonts:'Roboto', sans-serif;
+    --header-fonts: 'Merriweather', serif;
+    --body-fonts: 'Roboto', sans-serif;
     /* slope background color angles*/
     --background-slope: 50px;
     /*maximum width innerboxes*/
@@ -37,20 +37,16 @@
 }
 
 
-
 * {
-    margin:0;
+    margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
 
-
-
-
 /* ------------------------------- 2. Typography ----------------------------------- */
 
-h1,h2,h3,h4,h5,h6 {
+h1, h2, h3, h4, h5, h6 {
     font-family: var(--header-fonts);
     text-align: center;
 }
@@ -65,23 +61,24 @@ p {
 
 /* --------------- 3.1 Reusables ----------------------- */
 
-.outer-box{
+.outer-box {
     display: flex;
     justify-content: center;
 }
+
 .inner-box {
-    flex:0 1 var(--max-width-innerbox);
+    flex: 0 1 var(--max-width-innerbox);
     margin-left: 50px;
     margin-right: 50px;
 }
 
-p{
+p {
 
 }
 
-button{
+button {
     text-decoration: none;
-    color:white;
+    color: white;
     font-family: var(--body-fonts);
     white-space: nowrap;
     font-weight: 400;
@@ -89,16 +86,16 @@ button{
 
     background: var(--pink);
     padding-left: 50px;
-    padding-right:50px;
+    padding-right: 50px;
     padding-top: 25px;
-    padding-bottom:25px;
+    padding-bottom: 25px;
     border: none;
     border-radius: 50vh;
     box-shadow: 0 1px 8px rgba(0, 0, 0, 0.3);
     text-transform: uppercase;
 }
 
-a{
+a {
     text-decoration: none;
     color: var(--purple);
     font-family: var(--body-fonts);
@@ -117,49 +114,50 @@ a{
     color: white;
     background: linear-gradient(90deg, var(--blue) 0%, var(--purple) 100%);
     padding-top: 40px;
-    padding-bottom:190px;
+    padding-bottom: 190px;
     position: relative;
     z-index: 1;
 }
 
 .container_header::before {
-    content:"";
+    content: "";
     background: url(assets/noise-texture.png);
     width: 100%;
     height: 100%;
     position: absolute;
-    top:0;
-    left:0;
-    z-index:-1;
+    top: 0;
+    left: 0;
+    z-index: -1;
 }
 
 .container_header::after {
     content: "";
     display: block;
     width: 0;
-    height:0;
+    height: 0;
     border-top: var(--background-slope) solid transparent;
     border-left: 100vw solid white;
-    position:absolute;
-    bottom:0;
-    left:0;
+    position: absolute;
+    bottom: 0;
+    left: 0;
 
 }
-.header{
+
+.header {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
 }
-.header__navigator
- {
+
+.header__navigator {
     align-self: flex-end;
     display: flex;
     justify-content: flex-end;
-    width:100%; /*to increase the size of the nav to the innerbox*/
+    width: 100%; /*to increase the size of the nav to the innerbox*/
 }
 
-.header__menu{
+.header__menu {
     flex: 0 1 400px;
     list-style: none;
     display: flex;
@@ -167,12 +165,12 @@ a{
     gap: 50px;
 }
 
-.header__navigator a{
+.header__navigator a {
     flex: 0 1;
     white-space: nowrap;
 
     text-decoration: none;
-    color:white;
+    color: white;
     font-family: var(--body-fonts);
     font-weight: 300;
     font-size: 20px;
@@ -183,7 +181,7 @@ a{
     flex-direction: column;
     justify-content: space-between;
     gap: 30px;
-    margin-top:132px;
+    margin-top: 132px;
 }
 
 .header__divtitle {
@@ -193,10 +191,10 @@ a{
 
 .header__title {
     font-size: 45px;
-    flex:0 1 995px;
+    flex: 0 1 995px;
 }
 
-.header__undertitle{
+.header__undertitle {
     font-size: 32px;
     font-weight: 200;
     text-align: center;
@@ -208,8 +206,8 @@ a{
 }
 
 
-.header__image{
-    position:absolute;
+.header__image {
+    position: absolute;
     bottom: 0;
     left: calc(50% - 40px)
 }
@@ -217,7 +215,7 @@ a{
 
 /* --------------- 4.2 Introduction ------------------- */
 .container_introduction {
-    position:relative;
+    position: relative;
     padding-top: 100px;
     padding-bottom: 100px;
 }
@@ -230,7 +228,7 @@ a{
     font-weight: 700;
     color: var(--light-grey);
     position: absolute;
-    left:calc(50% - 440px);
+    left: calc(50% - 440px);
     top: -30px;
     z-index: -1;
 }
@@ -239,12 +237,12 @@ a{
     content: "";
     display: block;
     width: 0;
-    height:0;
+    height: 0;
     border-top: var(--background-slope) solid transparent;
     border-left: 100vw solid var(--light-grey);
-    position:absolute;
-    bottom:0;
-    left:0;
+    position: absolute;
+    bottom: 0;
+    left: 0;
 }
 
 .introduction {
@@ -252,7 +250,7 @@ a{
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    gap:40px;
+    gap: 40px;
 
 }
 
@@ -264,12 +262,13 @@ a{
 .introduction p {
     padding-top: 50px;
 }
+
 /* --------------- 4.3 Work ------------------- */
 
 .casestudies_outer-box {
-    background-color:var(--light-grey);
+    background-color: var(--light-grey);
     display: flex;
-    position:relative;
+    position: relative;
     padding-top: 225px;
     padding-bottom: 225px;
 }
@@ -281,7 +280,7 @@ a{
     font-weight: 700;
     color: white;
     position: absolute;
-    left:calc(50% - 440px);
+    left: calc(50% - 440px);
     top: -30px;
 }
 
@@ -289,12 +288,12 @@ a{
     content: "";
     display: block;
     width: 0;
-    height:0;
+    height: 0;
     border-top: var(--background-slope) solid transparent;
     border-left: 100vw solid white;
-    position:absolute;
-    bottom:0;
-    left:0;
+    position: absolute;
+    bottom: 0;
+    left: 0;
 }
 
 .casestudie_container {
@@ -327,14 +326,16 @@ a{
     gap: 45px;
     align-items: start;
     text-align: start;
+    padding-right: 20px;
+    padding-left: 20px;
 }
 
-.casestudie__headingwrapper h2{
+.casestudie__headingwrapper h2 {
     margin-bottom: 20px;
 
 }
 
-.casestudie__textwrapper a{
+.casestudie__textwrapper a {
     position: relative;
 }
 
@@ -359,52 +360,92 @@ a{
 }
 
 .casestudie__imagewrapper img {
-    width:100%;
+    width: 100%;
     box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
 }
 
+/* --------------- 4.3 Work ------------------- */
+
+.services_container {
+    position: relative;
+    border: blue;
+    padding-top: 200px;
+    padding-bottom: 150px;
+}
+
+.services_container::before {
+    content: "services";
+    font-size: 265px;
+    font-family: var(--body-fonts);
+    font-weight: 700;
+    color: var(--light-purple);
+    position: absolute;
+    left: calc(50% - 500px);
+    top: -30px;
+    z-index: -1;
+}
+
+.services_container::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 0;
+    border-bottom: var(--background-slope) solid transparent;
+    border-right: 100vw solid white;
+    position: absolute;
+    bottom: calc(-1* var(--background-slope));
+    left: 0;
+    /*z-index: 3;*/
+}
+
+.services {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    column-gap: 30px;
+    row-gap: 30px;
 
 
 
+}
+
+.services__article {
+    flex: 0 0 375px;
+    border: var(--blue);
+    border-width: 2px;
+    border-style: solid;
+    padding: 30px;
+
+    display:flex;
+    flex-direction: column;
+
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.15);
+    background-color: white;
 
 
+}
 
+.services__imagewrapper {
+    width: 60px;
+}
 
+.services__imagewrapper img {
+    width: 100%;
+}
 
+.services__article p{
+    font-weight: 300;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.services__article h3{
+    text-align: start;
+    color: var(--blue);
+    margin-top: 10px;
+    margin-bottom:20px;
+    font-size: 25px;
+    font-weight:700;
+}
 
 
 /* ------------------------------- 5. Media Queries -------------------------------- */

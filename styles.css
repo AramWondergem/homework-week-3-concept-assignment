@@ -533,4 +533,17 @@ a {
     padding-left: 80px;
 }
 
+/* --------------- 4.5 Footer ------------------- */
+
+footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+    font-size: 10px;
+    padding-top: 20px;
+    padding-bottom:20px;
+
+}
+
+
 /* ------------------------------- 5. Media Queries -------------------------------- */

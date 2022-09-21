@@ -44,6 +44,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    border:2px solid black;
 }
 
 
@@ -557,3 +558,13 @@ footer {
 
 
 /* ------------------------------- 5. Media Queries -------------------------------- */
+
+@media screen and (max-device-width: 576px) {
+    .inner-box {
+        flex: 0 1 576px;
+    }
+
+    footer {
+        background-color:chartreuse;
+    }
+}

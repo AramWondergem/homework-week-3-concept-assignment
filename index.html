@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<header class="outer-box container_header">
+<header class="outer-box header__container">
     <div class="inner-box header">
         <nav class="header__navigator">
             <ul class="header__menu">
@@ -27,7 +27,7 @@
         <img class="header__image" src="assets/squiggle_line_stripe.svg" alt="squiggle line strip"/>
     </div>
 </header>
-<section class="outer-box container_introduction">
+<section class="outer-box introduction__container">
     <div class="inner-box introduction">
         <h2>Rekupe is a digital agency in Los Angeles.</h2>
         <h2>We use strategic UX, SEO optimization and beautiful visual designs to help your business grow.</h2>
@@ -35,8 +35,8 @@
         <p>Have a question? <a href="#contact-us">Click here</a> to contact us!</p>
     </div>
 </section>
-<section class="outer-box casestudies_outer-box" id="case-studies">
-    <div class="inner-box casestudie_container">
+<section class="outer-box casestudies__outer-box" id="case-studies">
+    <div class="inner-box casestudie__container">
         <article class="casestudie">
             <div class="casestudie__textwrapper">
                 <div class="casestudie__headingwrapper">
@@ -77,10 +77,10 @@
             <div class="casestudie__imagewrapper">
                 <img src="/assets/work-image-03.jpeg" alt="Picture of tablet with the Worth platform"/>
             </div>
+        </article>
     </div>
-    </article>
 </section>
-<section class="outer-box services_container" id="services">
+<section class="outer-box services__container" id="services">
     <div class="inner-box services">
         <article class="services__article">
             <div class="services__imagewrapper">
@@ -139,31 +139,31 @@
         </article>
     </div>
 </section>
-<section class="outer-box container_contact-us" id="contact-us">
+<section class="outer-box contact-us__container" id="contact-us">
     <div class="inner-box contact-us">
         <h2>Let's work together</h2>
         <p>Have a question? Need a quote? Let us know!</p>
         <form class="contact-us__form" onsubmit="hier-hebben-we-js-voor-nodig">
             <div class="contact-us__formdiv">
-            <div class="contact-us__input-labelwrapper">
+                <div class="contact-us__input-labelwrapper">
                     <label for="name-field">Name</label>
-                <div class="contact-us__inputwrapper">
-                    <input type="text" id="name-field" name="name-field" placeholder="Name"/>
+                    <div class="contact-us__inputwrapper">
+                        <input type="text" id="name-field" name="name-field" placeholder="Name"/>
+                    </div>
                 </div>
-            </div>
-            <div class="contact-us__input-labelwrapper">
+                <div class="contact-us__input-labelwrapper">
                     <label for="e-mail-field">Email</label>
-                <div class="contact-us__inputwrapper">
-                    <input type="email" id="e-mail-field" name="e-mail-field" placeholder="Email"/>
+                    <div class="contact-us__inputwrapper">
+                        <input type="email" id="e-mail-field" name="e-mail-field" placeholder="Email"/>
+                    </div>
                 </div>
-            </div>
-            <div class="contact-us__input-labelwrapper">
+                <div class="contact-us__input-labelwrapper">
                     <label for="message-field">Message</label>
-                <div class="contact-us__inputwrapper">
-                    <textarea id="message-field" name="message-field" rows="10" placeholder="Message"></textarea>
+                    <div class="contact-us__inputwrapper">
+                        <textarea id="message-field" name="message-field" rows="10" placeholder="Message"></textarea>
+                    </div>
                 </div>
-            </div>
-            <button type="submit">Send</button>
+                <button type="submit">Send</button>
             </div>
         </form>
     </div>

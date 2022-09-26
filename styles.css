@@ -1,23 +1,31 @@
-/*////////////////////////
-    Table of Contents
-    1. Global Styles
-    2. Typography
-    3. Layout
-        3.1 Reusables
-        3.2 Other
-    4. Areas
-        4.1 Header
-        4.2 Introduction
-        4.3 work
-        4.4 services
-        4.5 contact us
-        4.6 footer
-    5. Media Queries
-////////////////////////*/
+/*///////////////////////////////////////////////////////*/
+/*    Table of Contents*/
+/*    1. Global Styles*/
+/*    2. Typography*/
+/*    3. Layout*/
+/*        3.1 Reusables*/
+/*        3.2 Other*/
+/*    4. Areas*/
+/*        4.1 Header*/
+/*        4.2 Introduction*/
+/*        4.3 work*/
+/*        4.4 services*/
+/*        4.5 contact us*/
+/*        4.6 footer*/
+/*    5. Media Queries*/
+/*        5.1 Mobile*/
+/*            5.1.1 Global styles*/
+/*            5.1.2 Header*/
+/*            5.1.3 Introduction*/
+/*            5.1.4 Casestudie*/
+/*            5.1.5 Services*/
+/*            5.1.6 Contact-us*/
+/*            5.1.7 Footer*/
+/*/////////////////////////////////////////////////////*/
 
 /* ------------------------------- 1. Global Styles -------------------------------- */
 
-@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700;900&family=Roboto:wght@300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter+Tight:wght@300;400;500;600;700;800;900&family=Merriweather:wght@300;400;700;900&family=Roboto+Slab:wght@300;400;700;900&family=Roboto:wght@300;400;500;700&family=Source+Serif+Pro:wght@300;400;600;700;900&display=swap');
 
 
 :root {
@@ -31,8 +39,8 @@
     --grey: HSL(0, 0%, 48%);
     --white: white;
     /*fonts*/
-    --header-fonts: 'Merriweather', serif;
-    --body-fonts: 'Roboto', sans-serif;
+    --header-fonts: Merriweather, Roboto Slab, Source Serif Pro, serif;
+    --body-fonts: Roboto,Inter Tight, sans-serif;
     /* slope background color angles*/
     --background-slope: 50px;
     --background-slope-mobile: 30px;
@@ -117,7 +125,7 @@ a {
 
 /* --------------- 4.1 Header ------------------------- */
 
-.container_header {
+.header__container {
     color: var(--white);
     background: linear-gradient(90deg, var(--blue) 0%, var(--purple) 100%);
     padding-top: 40px;
@@ -126,7 +134,7 @@ a {
     z-index: 1;
 }
 
-.container_header::before {
+.header__container::before {
     content: "";
     background: url(assets/noise-texture.png);
     width: 100%;
@@ -137,7 +145,7 @@ a {
     z-index: -1;
 }
 
-.container_header::after {
+.header__container::after {
     content: "";
     display: block;
     width: 0;
@@ -221,13 +229,13 @@ a {
 
 
 /* --------------- 4.2 Introduction ------------------- */
-.container_introduction {
+.introduction__container {
     position: relative;
     padding-top: 100px;
     padding-bottom: 100px;
 }
 
-.container_introduction::before {
+.introduction__container::before {
 
     content: "hello";
     font-size: 400px;
@@ -240,7 +248,7 @@ a {
     z-index: -1;
 }
 
-.container_introduction::after {
+.introduction__container::after {
     content: "";
     display: block;
     width: 0;
@@ -272,7 +280,7 @@ a {
 
 /* --------------- 4.3 Work ------------------- */
 
-.casestudies_outer-box {
+.casestudies__outer-box {
     background-color: var(--light-grey);
     display: flex;
     position: relative;
@@ -280,7 +288,7 @@ a {
     padding-bottom: 225px;
 }
 
-.casestudies_outer-box::before {
+.casestudies__outer-box::before {
     content: "work";
     font-size: 400px;
     font-family: var(--body-fonts);
@@ -291,7 +299,7 @@ a {
     top: -30px;
 }
 
-.casestudies_outer-box::after {
+.casestudies__outer-box::after {
     content: "";
     display: block;
     width: 0;
@@ -303,7 +311,7 @@ a {
     left: 0;
 }
 
-.casestudie_container {
+.casestudie__container {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -320,7 +328,7 @@ a {
     gap: 40px;
 }
 
-.casestudie_container :nth-child(even) {
+.casestudie__container :nth-child(even) {
     flex-direction: row-reverse;
 }
 
@@ -373,14 +381,14 @@ a {
 
 /* --------------- 4.4 Services ------------------- */
 
-.services_container {
+.services__container {
     position: relative;
-    border: blue;
+    border: var(--blue);
     padding-top: 200px;
     padding-bottom: 150px;
 }
 
-.services_container::before {
+.services__container::before {
     content: "services";
     font-size: 265px;
     font-family: var(--body-fonts);
@@ -392,7 +400,7 @@ a {
     z-index: -1;
 }
 
-.services_container::after {
+.services__container::after {
     content: "";
     display: block;
     width: 0;
@@ -454,7 +462,7 @@ a {
 }
 
 /* --------------- 4.5 Contact us ------------------- */
-.container_contact-us {
+.contact-us__container {
     color: var(--white);
     background: linear-gradient(90deg, var(--blue) 0%, var(--purple) 100%);
     padding-top: 150px;
@@ -463,7 +471,7 @@ a {
     z-index: 1;
 }
 
-.container_contact-us::before {
+.contact-us__container::before {
     content: "";
     background: url(assets/noise-texture.png);
     width: 100%;
@@ -560,59 +568,26 @@ footer {
 
 /* ------------------------------- 5. Media Queries -------------------------------- */
 
+/* --------------- 5.1 Mobile ----------------------- */
+
 @media screen and (max-device-width: 576px) {
 
+    /* -------- 5.1.1 global styles ----------- */
 
     .outer-box {
         width: 100vw;
     }
-
-    .casestudies_outer-box {
-        padding-top: 186px;
-        padding-bottom: 70px;
-    }
-
-    .services_container {
-        padding-top: 175px;
-        padding-bottom: 70px;
-    }
-
-    .container_introduction {
-        padding-top: 155px;
-        padding-bottom: 150px;
-    }
-
     .inner-box {
         flex-basis: 576px;
         margin-left: 15px;
         margin-right: 15px;
     }
 
-    .container_introduction::before, .casestudies_outer-box::before, .services_container::before {
-        left: 0;
-        left: 50%;
-        transform: translate(-50%);
-        letter-spacing: -15px;
-        top: 30px;
-
-    }
-
-    .container_introduction::before, .casestudies_outer-box::before {
-        font-size: 40vw;
-    }
-
-    .services_container::before {
-        font-size: 30vw;
-    }
-
-    .container_header::after, .container_introduction::after, .casestudies_outer-box::after {
+    .header__container::after, .introduction__container::after, .casestudies__outer-box::after {
         border-top: var(--background-slope-mobile) solid transparent;
     }
 
-    .services_container::after {
-        border-bottom: var(--background-slope-mobile) solid transparent;
-        bottom: calc(-1 * var(--background-slope-mobile))
-    }
+    /* -------- 5.1.2 header ----------- */
 
     .header__navigator {
         width: 80vw;
@@ -637,20 +612,40 @@ footer {
         font-size: 5vw;
     }
 
-    .casestudie {
-        flex-wrap: wrap;
+    /* -------- 5.1.3 introduction ----------- */
+
+    .introduction__container {
+        padding-top: 155px;
+        padding-bottom: 150px;
+    }
+    .introduction__container::before, .casestudies__outer-box::before, .services__container::before {
+        left: 50%;
+        transform: translate(-50%);
+        letter-spacing: -15px;
+        top: 30px;
+
     }
 
+    .introduction__container::before, .casestudies__outer-box::before {
+        font-size: 40vw;
+    }
 
-    .casestudie_container {
+    /* -------- 5.1.4 casestudies ----------- */
+    .casestudies__outer-box {
+        padding-top: 186px;
+        padding-bottom: 70px;
+    }
+
+    .casestudie__container {
         gap: 15px;
     }
 
-    .casestudie_container :nth-child(even) {
+    .casestudie__container :nth-child(even) {
         flex-direction: column-reverse;
     }
 
     .casestudie {
+        flex-wrap: wrap;
         flex-direction: column-reverse;
         gap: 15px;
 
@@ -670,12 +665,26 @@ footer {
     .casestudie__imagewrapper {
         flex: 1 1;
     }
+    /* -------- 5.1.5 services ----------- */
+    .services__container {
+        padding-top: 175px;
+        padding-bottom: 70px;
+    }
+    .services__container::before {
+        font-size: 30vw;
+    }
+
+    .services__container::after {
+        border-bottom: var(--background-slope-mobile) solid transparent;
+        bottom: calc(-1 * var(--background-slope-mobile))
+    }
 
     .services__article {
         flex-basis: 437px;
         padding: 61px;
 
     }
+    /* -------- 5.1.6 contact-us  ----------- */
 
     .contact-us h2 {
         font-size: 7vw;
@@ -684,6 +693,7 @@ footer {
     .contact-us p {
         font-size: 4vw;
     }
+    /* -------- 5.1.7 footer ----------- */
 
     .footer p {
         font-size: 3vw;

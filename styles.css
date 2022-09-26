@@ -40,7 +40,7 @@
     --white: white;
     /*fonts*/
     --header-fonts: Merriweather, Roboto Slab, Source Serif Pro, serif;
-    --body-fonts: Roboto,Inter Tight, sans-serif;
+    --body-fonts: Roboto, Inter Tight, sans-serif;
     /* slope background color angles*/
     --background-slope: 50px;
     --background-slope-mobile: 30px;
@@ -573,10 +573,10 @@ footer {
 @media screen and (max-device-width: 576px) {
 
     /* -------- 5.1.1 global styles ----------- */
-
     .outer-box {
         width: 100vw;
     }
+
     .inner-box {
         flex-basis: 576px;
         margin-left: 15px;
@@ -588,7 +588,6 @@ footer {
     }
 
     /* -------- 5.1.2 header ----------- */
-
     .header__navigator {
         width: 80vw;
         align-self: center;
@@ -613,11 +612,11 @@ footer {
     }
 
     /* -------- 5.1.3 introduction ----------- */
-
     .introduction__container {
         padding-top: 155px;
         padding-bottom: 150px;
     }
+
     .introduction__container::before, .casestudies__outer-box::before, .services__container::before {
         left: 50%;
         transform: translate(-50%);
@@ -665,11 +664,13 @@ footer {
     .casestudie__imagewrapper {
         flex: 1 1;
     }
+
     /* -------- 5.1.5 services ----------- */
     .services__container {
         padding-top: 175px;
         padding-bottom: 70px;
     }
+
     .services__container::before {
         font-size: 30vw;
     }
@@ -684,8 +685,8 @@ footer {
         padding: 61px;
 
     }
-    /* -------- 5.1.6 contact-us  ----------- */
 
+    /* -------- 5.1.6 contact-us  ----------- */
     .contact-us h2 {
         font-size: 7vw;
     }
@@ -693,8 +694,8 @@ footer {
     .contact-us p {
         font-size: 4vw;
     }
-    /* -------- 5.1.7 footer ----------- */
 
+    /* -------- 5.1.7 footer ----------- */
     .footer p {
         font-size: 3vw;
         font-weight: 300;

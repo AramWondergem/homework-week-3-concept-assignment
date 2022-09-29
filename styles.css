@@ -48,6 +48,10 @@
     --max-width-innerbox: 1400px;
 }
 
+html {
+    font-size: 1em;
+}
+
 
 * {
     margin: 0;
@@ -92,13 +96,10 @@ button {
     font-family: var(--body-fonts);
     white-space: nowrap;
     font-weight: 400;
-    font-size: 15px;
+    font-size: 1rem;
 
     background: var(--pink);
-    padding-left: 50px;
-    padding-right: 50px;
-    padding-top: 25px;
-    padding-bottom: 25px;
+    padding: 1.8em 3.6em;
     border: none;
     border-radius: 50vh;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
@@ -188,7 +189,7 @@ a {
     color: var(--white);
     font-family: var(--body-fonts);
     font-weight: 300;
-    font-size: 20px;
+    font-size: 1.4rem;
 }
 
 .header__titleblock {
@@ -205,12 +206,12 @@ a {
 }
 
 .header__title {
-    font-size: 45px;
+    font-size: 3rem;
     flex: 0 1 995px;
 }
 
 .header__undertitle {
-    font-size: 32px;
+    font-size: 2rem;
     font-weight: 200;
     text-align: center;
 }
@@ -243,7 +244,7 @@ a {
     font-weight: 700;
     color: var(--light-purple);
     position: absolute;
-    left: calc(50% - 440px);
+    left: calc(50% - 400px);
     top: -30px;
     z-index: -1;
 }
@@ -334,11 +335,10 @@ a {
 
 .casestudie__textwrapper {
     flex: 0 0 300px;
-    min-height: 300px;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 45px;
+    /*gap: 45px;*/
     align-items: start;
     text-align: start;
     padding-right: 20px;
@@ -346,8 +346,11 @@ a {
 }
 
 .casestudie__headingwrapper h2 {
-    margin-bottom: 20px;
+    padding: 0.6em 0;
+}
 
+.casestudie__textwrapper p {
+    padding: 2em 0;
 }
 
 .casestudie__textwrapper a {
@@ -425,11 +428,11 @@ a {
 }
 
 .services__article {
-    flex: 0 0 375px;
+    flex: 0 1 375px;
     border: var(--blue);
     border-width: 2px;
     border-style: solid;
-    padding: 30px;
+    padding: 2em;
 
     display: flex;
     flex-direction: column;
@@ -455,9 +458,9 @@ a {
 .services__article h3 {
     text-align: start;
     color: var(--blue);
-    margin-top: 10px;
-    margin-bottom: 20px;
-    font-size: 25px;
+    padding-top: 0.4em;
+    padding-bottom: 0.8em;
+    font-size: 1.5rem;
     font-weight: 700;
 }
 
@@ -491,7 +494,7 @@ a {
 }
 
 .contact-us h2 {
-    font-size: 50px;
+    font-size: 3rem;
 }
 
 .contact-us p {
@@ -530,7 +533,7 @@ a {
 
 .contact-us__form input, .contact-us__form textarea {
     flex: 0 1 800px;
-    padding: 15px;
+    padding: 1em;
     border-radius: 5px;
     border: 1px solid var(--grey);
     display: block;
@@ -538,18 +541,13 @@ a {
 
 .contact-us__form input::placeholder, .contact-us__form textarea::placeholder {
     font-family: var(--body-fonts);
-    font-size: 12px;
+    font-size: 0.8rem;
 }
 
 .contact-us__input-labelwrapper label {
     font-family: var(--body-fonts);
     font-weight: 700;
-    font-size: 12px;
-}
-
-.contact-us__form button {
-    padding-right: 80px;
-    padding-left: 80px;
+    font-size: 0.8rem;
 }
 
 /* --------------- 4.6 Footer ------------------- */
@@ -558,9 +556,8 @@ footer {
     background-color: black;
     color: var(--white);
     text-align: center;
-    font-size: 10px;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    font-size: 0.6rem;
+    padding: 2.5em 0;
     white-space: nowrap;
 
 }
@@ -600,7 +597,7 @@ footer {
 
     .header__menu a {
         font-weight: 500;
-        font-size: 16px;
+        font-size: 1.5rem;
     }
 
     .header h1 {
@@ -651,7 +648,7 @@ footer {
     }
 
     .casestudie__textwrapper {
-        font-size: 19px;
+        font-size: 1.3rem;
 
     }
 

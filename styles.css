@@ -373,7 +373,7 @@ a {
 }
 
 .casestudie__imagewrapper {
-    flex: 1 0 450px;
+    flex: 1 0 250px;
     max-width: 600px;
 }
 
@@ -582,7 +582,15 @@ footer {
 
     .header__container::after, .introduction__container::after, .casestudies__outer-box::after {
         border-top: var(--background-slope-mobile) solid transparent;
+        bottom: -1px;
     }
+
+    .services__container::after {
+        border-bottom: var(--background-slope-mobile) solid transparent;
+        bottom: calc(-1 * calc(var(--background-slope-mobile) - 1px));
+    }
+
+
 
     /* -------- 5.1.2 header ----------- */
     .header__navigator {
@@ -672,10 +680,7 @@ footer {
         font-size: 30vw;
     }
 
-    .services__container::after {
-        border-bottom: var(--background-slope-mobile) solid transparent;
-        bottom: calc(-1 * var(--background-slope-mobile))
-    }
+
 
     .services__article {
         flex-basis: 437px;

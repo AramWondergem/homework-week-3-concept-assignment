@@ -591,7 +591,6 @@ footer {
     }
 
 
-
     /* -------- 5.1.2 header ----------- */
     .header__navigator {
         width: 80vw;
@@ -679,7 +678,6 @@ footer {
     .services__container::before {
         font-size: 30vw;
     }
-
 
 
     .services__article {

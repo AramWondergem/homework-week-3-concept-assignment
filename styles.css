@@ -1,57 +1,76 @@
-/*////////////////////////
-    Table of Contents
-    1. Global Styles
-    2. Typography
-    3. Layout
-        3.1 Reusables
-        3.2 Other
-    4. Areas
-        4.1 Header
-        4.2 Introduction
-        etc.
-    5. Media Queries
-////////////////////////*/
+/*///////////////////////////////////////////////////////*/
+/*    Table of Contents*/
+/*    1. Global Styles*/
+/*    2. Typography*/
+/*    3. Layout*/
+/*        3.1 Reusables*/
+/*        3.2 Other*/
+/*    4. Areas*/
+/*        4.1 Header*/
+/*        4.2 Introduction*/
+/*        4.3 work*/
+/*        4.4 services*/
+/*        4.5 contact us*/
+/*        4.6 footer*/
+/*    5. Media Queries*/
+/*        5.1 Mobile*/
+/*            5.1.1 Global styles*/
+/*            5.1.2 Header*/
+/*            5.1.3 Introduction*/
+/*            5.1.4 Casestudie*/
+/*            5.1.5 Services*/
+/*            5.1.6 Contact-us*/
+/*            5.1.7 Footer*/
+/*/////////////////////////////////////////////////////*/
 
 /* ------------------------------- 1. Global Styles -------------------------------- */
 
-@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700;900&family=Roboto:wght@300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter+Tight:wght@300;400;500;600;700;800;900&family=Merriweather:wght@300;400;700;900&family=Roboto+Slab:wght@300;400;700;900&family=Roboto:wght@300;400;500;700&family=Source+Serif+Pro:wght@300;400;600;700;900&display=swap');
 
 
 :root {
     /*colors*/
     --purple: HSL(259, 72%, 47%);
     --blue: HSL(241, 75%, 58%);
-    --pink:HSL(337, 83%, 60%);
-    --black:HSL(0, 0%, 5%);
-    --light-purple:HSL(248, 100%, 97%);
-    --light-grey:HSL(210, 33%, 96%);
-    --grey:HSL(0, 0%, 48%);
+    --pink: HSL(337, 83%, 60%);
+    --black: HSL(0, 0%, 5%);
+    --light-purple: HSL(248, 100%, 97%);
+    --light-grey: HSL(210, 33%, 96%);
+    --grey: HSL(0, 0%, 48%);
+    --white: white;
     /*fonts*/
-    --header-fonts:'Merriweather', serif;
-    --body-fonts:'Roboto', sans-serif;
+    --header-fonts: Merriweather, Roboto Slab, Source Serif Pro, serif;
+    --body-fonts: Roboto, Inter Tight, sans-serif;
+    /* slope background color angles*/
+    --background-slope: 50px;
+    --background-slope-mobile: 30px;
+    /*maximum width innerboxes*/
+    --max-width-innerbox: 1400px;
 }
 
+html {
+    font-size: 1em;
+}
 
 
 * {
-    margin:0;
+    margin: 0;
     padding: 0;
     box-sizing: border-box;
+    /*border: 2px solid black;*/
 }
-
-
-
 
 
 /* ------------------------------- 2. Typography ----------------------------------- */
 
-h1,h2,h3,h4,h5,h6 {
+h1, h2, h3, h4, h5, h6 {
     font-family: var(--header-fonts);
     text-align: center;
 }
 
 p {
     font-family: var(--body-fonts);
+    font-weight: 500;
 }
 
 
@@ -59,37 +78,44 @@ p {
 
 /* --------------- 3.1 Reusables ----------------------- */
 
-.outer-box{
+.outer-box {
     display: flex;
     justify-content: center;
 }
+
 .inner-box {
-    flex:0 1 1400px;
+    flex: 0 1 var(--max-width-innerbox);
     margin-left: 50px;
     margin-right: 50px;
 }
 
-p{
-    text-align: center;
-}
 
-button{
+button {
     text-decoration: none;
-    color:white;
+    color: var(--white);
     font-family: var(--body-fonts);
     white-space: nowrap;
     font-weight: 400;
-    font-size: 20px;
+    font-size: 1rem;
 
     background: var(--pink);
-    padding-left: 40px;
-    padding-right:40px;
-    padding-top: 15px;
-    padding-bottom: 15px;
+    padding: 1.8em 3.6em;
     border: none;
     border-radius: 50vh;
-    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
     text-transform: uppercase;
+}
+
+button:hover {
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.6);
+    font-weight: 500;
+}
+
+a {
+    text-decoration: none;
+    color: var(--purple);
+    font-family: var(--body-fonts);
+    font-weight: 500;
 }
 
 
@@ -100,53 +126,54 @@ button{
 
 /* --------------- 4.1 Header ------------------------- */
 
-header {
-    color: white;
+.header__container {
+    color: var(--white);
     background: linear-gradient(90deg, var(--blue) 0%, var(--purple) 100%);
     padding-top: 40px;
-    padding-bottom:190px;
+    padding-bottom: 190px;
     position: relative;
     z-index: 1;
 }
 
-header::before {
-    content:"";
+.header__container::before {
+    content: "";
     background: url(assets/noise-texture.png);
     width: 100%;
     height: 100%;
     position: absolute;
-    top:0;
-    left:0;
-    z-index:-1;
+    top: 0;
+    left: 0;
+    z-index: -1;
 }
 
-header::after {
+.header__container::after {
     content: "";
     display: block;
     width: 0;
-    height:0;
-    border-top: 50px solid transparent;
+    height: 0;
+    border-top: var(--background-slope) solid transparent;
     border-left: 100vw solid white;
-    position:absolute;
-    bottom:0;
-    left:0;
+    position: absolute;
+    bottom: 0;
+    left: 0;
 
 }
-.header{
+
+.header {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
 }
-.header__navigator
- {
+
+.header__navigator {
     align-self: flex-end;
     display: flex;
     justify-content: flex-end;
-    width:100%; /*to increase the size of the nav to the innerbox*/
+    width: 100%;
 }
 
-.header__menu{
+.header__menu {
     flex: 0 1 400px;
     list-style: none;
     display: flex;
@@ -154,15 +181,15 @@ header::after {
     gap: 50px;
 }
 
-.header__navigator a{
+.header__navigator a {
     flex: 0 1;
     white-space: nowrap;
 
     text-decoration: none;
-    color:white;
+    color: var(--white);
     font-family: var(--body-fonts);
     font-weight: 300;
-    font-size: 20px;
+    font-size: 1.4rem;
 }
 
 .header__titleblock {
@@ -170,16 +197,23 @@ header::after {
     flex-direction: column;
     justify-content: space-between;
     gap: 30px;
-    margin-top:132px;
+    margin-top: 132px;
+}
+
+.header__divtitle {
+    display: flex;
+    justify-content: center;
 }
 
 .header__title {
-    font-size: 60px;
+    font-size: 3rem;
+    flex: 0 1 995px;
 }
 
-.header__undertitle{
-    font-size: 32px;
+.header__undertitle {
+    font-size: 2rem;
     font-weight: 200;
+    text-align: center;
 }
 
 .header__divbutton {
@@ -188,13 +222,483 @@ header::after {
 }
 
 
-.header__image{
-    position:absolute;
+.header__image {
+    position: absolute;
     bottom: 0;
     left: calc(50% - 40px)
 }
 
 
 /* --------------- 4.2 Introduction ------------------- */
+.introduction__container {
+    position: relative;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.introduction__container::before {
+
+    content: "hello";
+    font-size: 400px;
+    font-family: var(--body-fonts);
+    font-weight: 700;
+    color: var(--light-purple);
+    position: absolute;
+    left: calc(50% - 400px);
+    top: -30px;
+    z-index: -1;
+}
+
+.introduction__container::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 0;
+    border-top: var(--background-slope) solid transparent;
+    border-left: 100vw solid var(--light-grey);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.introduction {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+
+}
+
+.introduction h2 {
+    color: var(--purple);
+    max-width: 630px;
+}
+
+.introduction p {
+    padding-top: 50px;
+}
+
+/* --------------- 4.3 Work ------------------- */
+
+.casestudies__outer-box {
+    background-color: var(--light-grey);
+    display: flex;
+    position: relative;
+    padding-top: 225px;
+    padding-bottom: 225px;
+}
+
+.casestudies__outer-box::before {
+    content: "work";
+    font-size: 400px;
+    font-family: var(--body-fonts);
+    font-weight: 700;
+    color: white;
+    position: absolute;
+    left: calc(50% - 440px);
+    top: -30px;
+}
+
+.casestudies__outer-box::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 0;
+    border-top: var(--background-slope) solid transparent;
+    border-left: 100vw solid white;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.casestudie__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 50px;
+    align-items: center;
+}
+
+.casestudie {
+    z-index: 1;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 40px;
+}
+
+.casestudie__container :nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+.casestudie__textwrapper {
+    flex: 0 0 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /*gap: 45px;*/
+    align-items: start;
+    text-align: start;
+    padding-right: 20px;
+    padding-left: 20px;
+}
+
+.casestudie__headingwrapper h2 {
+    padding: 0.6em 0;
+}
+
+.casestudie__textwrapper p {
+    padding: 2em 0;
+}
+
+.casestudie__textwrapper a {
+    position: relative;
+}
+
+.casestudie__textwrapper a::after {
+    content: "";
+    background-color: var(--blue);
+    width: 1rem;
+    height: 0.1rem;
+    /*top: 9px;*/
+    /*left: 95px;*/
+    transform: translateX(0.71rem) translateY(0.6rem);
+    position: absolute;
+    transition: width .35s ease-in-out;
+}
+
+.casestudie__textwrapper a:hover::after {
+    width: 4rem;
+}
+
+.casestudie__imagewrapper {
+    flex: 1 0 250px;
+    max-width: 600px;
+}
+
+.casestudie__imagewrapper img {
+    width: 100%;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+}
+
+/* --------------- 4.4 Services ------------------- */
+
+.services__container {
+    position: relative;
+    border: var(--blue);
+    padding-top: 200px;
+    padding-bottom: 150px;
+}
+
+.services__container::before {
+    content: "services";
+    font-size: 265px;
+    font-family: var(--body-fonts);
+    font-weight: 700;
+    color: var(--light-purple);
+    position: absolute;
+    left: calc(50% - 500px);
+    top: -30px;
+    z-index: -1;
+}
+
+.services__container::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 0;
+    border-bottom: var(--background-slope) solid transparent;
+    border-right: 100vw solid white;
+    position: absolute;
+    bottom: calc(-1 * var(--background-slope));
+    left: 0;
+    z-index: 2;
+}
+
+.services {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    column-gap: 30px;
+    row-gap: 30px;
+
+
+}
+
+.services__article {
+    flex: 0 1 375px;
+    border: var(--blue);
+    border-width: 2px;
+    border-style: solid;
+    padding: 2em;
+
+    display: flex;
+    flex-direction: column;
+
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.15);
+    background-color: white;
+
+
+}
+
+.services__imagewrapper {
+    width: 60px;
+}
+
+.services__imagewrapper img {
+    width: 100%;
+}
+
+.services__article p {
+    font-weight: 300;
+}
+
+.services__article h3 {
+    text-align: start;
+    color: var(--blue);
+    padding-top: 0.4em;
+    padding-bottom: 0.8em;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+/* --------------- 4.5 Contact us ------------------- */
+.contact-us__container {
+    color: var(--white);
+    background: linear-gradient(90deg, var(--blue) 0%, var(--purple) 100%);
+    padding-top: 150px;
+    padding-bottom: 40px;
+    position: relative;
+    z-index: 1;
+}
+
+.contact-us__container::before {
+    content: "";
+    background: url(assets/noise-texture.png);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.contact-us {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.contact-us h2 {
+    font-size: 3rem;
+}
+
+.contact-us p {
+    font-weight: 300;
+}
+
+.contact-us__form {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.contact-us__formdiv {
+    flex: 0 1 800px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+}
+
+.contact-us__input-labelwrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+.contact-us__inputwrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+}
+
+.contact-us__form input, .contact-us__form textarea {
+    flex: 0 1 800px;
+    padding: 1em;
+    border-radius: 5px;
+    border: 1px solid var(--grey);
+    display: block;
+}
+
+.contact-us__form input::placeholder, .contact-us__form textarea::placeholder {
+    font-family: var(--body-fonts);
+    font-size: 0.8rem;
+}
+
+.contact-us__input-labelwrapper label {
+    font-family: var(--body-fonts);
+    font-weight: 700;
+    font-size: 0.8rem;
+}
+
+/* --------------- 4.6 Footer ------------------- */
+
+footer {
+    background-color: black;
+    color: var(--white);
+    text-align: center;
+    font-size: 0.6rem;
+    padding: 2.5em 0;
+    white-space: nowrap;
+
+}
+
 
 /* ------------------------------- 5. Media Queries -------------------------------- */
+
+/* --------------- 5.1 Mobile ----------------------- */
+
+@media screen and (max-device-width: 576px) {
+
+    /* -------- 5.1.1 global styles ----------- */
+    .outer-box {
+        width: 100vw;
+    }
+
+    .inner-box {
+        flex-basis: 576px;
+        margin: 0 25px;
+    }
+
+    .header__container::after, .introduction__container::after, .casestudies__outer-box::after {
+        border-top: var(--background-slope-mobile) solid transparent;
+        bottom: -1px;
+    }
+
+    .services__container::after {
+        border-bottom: var(--background-slope-mobile) solid transparent;
+        bottom: calc(-1 * calc(var(--background-slope-mobile) - 1px));
+    }
+
+
+    /* -------- 5.1.2 header ----------- */
+    .header__navigator {
+        width: 80vw;
+        align-self: center;
+    }
+
+    .header__menu {
+        flex: 1 1;
+        gap: 0;
+    }
+
+    .header__menu a {
+        font-weight: 500;
+        font-size: 1rem;
+    }
+
+    .header h1 {
+        font-size: 7vw;
+    }
+
+    .header p {
+        font-size: 5vw;
+    }
+
+    /* -------- 5.1.3 introduction ----------- */
+    .introduction__container {
+        padding-top: 155px;
+        padding-bottom: 150px;
+    }
+
+    .introduction__container::before, .casestudies__outer-box::before, .services__container::before {
+        left: 50%;
+        transform: translate(-50%);
+        letter-spacing: -15px;
+        top: 30px;
+
+    }
+
+    .introduction__container::before, .casestudies__outer-box::before {
+        font-size: 40vw;
+    }
+
+    /* -------- 5.1.4 casestudies ----------- */
+    .casestudies__outer-box {
+        padding-top: 186px;
+        padding-bottom: 70px;
+    }
+
+    .casestudie__container {
+        gap: 15px;
+    }
+
+    .casestudie__container :nth-child(even) {
+        flex-direction: column-reverse;
+    }
+
+    .casestudie {
+        flex-wrap: wrap;
+        flex-direction: column-reverse;
+        gap: 15px;
+
+    }
+
+    .casestudie__textwrapper {
+        font-size: 1.3rem;
+
+    }
+
+    .casestudie__textwrapper a::after {
+        transform: translateX(0.71rem) translateY(0.8rem);
+
+    }
+
+
+    .casestudie__imagewrapper {
+        flex: 1 1;
+    }
+
+    /* -------- 5.1.5 services ----------- */
+    .services__container {
+        padding-top: 175px;
+        padding-bottom: 70px;
+    }
+
+    .services__container::before {
+        font-size: 30vw;
+    }
+
+
+    .services__article {
+        flex-basis: 437px;
+        padding: 61px;
+
+    }
+
+    /* -------- 5.1.6 contact-us  ----------- */
+    .contact-us h2 {
+        font-size: 7vw;
+    }
+
+    .contact-us p {
+        font-size: 4vw;
+    }
+
+    /* -------- 5.1.7 footer ----------- */
+    .footer p {
+        font-size: 3vw;
+        font-weight: 300;
+    }
+
+}
